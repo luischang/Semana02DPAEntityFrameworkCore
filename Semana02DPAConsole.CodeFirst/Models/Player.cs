@@ -15,6 +15,10 @@ namespace Semana02DPAConsole.CodeFirst.Models
         public int Id { get; set; }
         [Column(TypeName = "nvarchar(100)")]
         public string FullName { get; set; }
+        [Column(TypeName = "int")]
+        public int Dorsal { get; set; }
+        [Column(TypeName ="bit")]
+        public bool Status { get; set; }
 
 
     }
