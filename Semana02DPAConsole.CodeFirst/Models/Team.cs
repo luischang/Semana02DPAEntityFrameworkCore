@@ -8,19 +8,15 @@ using System.Threading.Tasks;
 
 namespace Semana02DPAConsole.CodeFirst.Models
 {
-    [Table("Player")]
-    public class Player
+    [Table("Team")]
+    public class Team
     {
         [Key]
         public int Id { get; set; }
         [Column(TypeName = "nvarchar(100)")]
-        public string FullName { get; set; }
-        [Column(TypeName = "int")]
-        public int Dorsal { get; set; }
-        [Column(TypeName ="bit")]
-        public bool Status { get; set; }
+        public string Description { get; set; }
 
-        //public virtual Team Team { get; set; }
+        public virtual ICollection<Player> Players { get; set; }
 
     }
 }

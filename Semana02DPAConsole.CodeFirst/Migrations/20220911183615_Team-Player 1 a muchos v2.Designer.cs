@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Semana02DPAConsole.CodeFirst.Models;
 
@@ -11,9 +12,10 @@ using Semana02DPAConsole.CodeFirst.Models;
 namespace Semana02DPAConsole.CodeFirst.Migrations
 {
     [DbContext(typeof(Qatar2022DbContext))]
-    partial class Qatar2022DbContextModelSnapshot : ModelSnapshot
+    [Migration("20220911183615_Team-Player 1 a muchos v2")]
+    partial class TeamPlayer1amuchosv2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

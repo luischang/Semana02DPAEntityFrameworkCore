@@ -25,5 +25,6 @@ namespace Semana02DPAConsole.CodeFirst.Models
         }
 
         public virtual DbSet<Player> Player { get; set; } 
+        public virtual DbSet<Team> Team { get; set; }
     }
 }
