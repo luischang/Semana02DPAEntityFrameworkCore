@@ -53,3 +53,32 @@ var context = new Qatar2022DbContext();
 
 //context.Player.AddRange(listadoJugadores);
 //context.SaveChanges();
+
+//Search player
+//LINQ query expressions
+//var todosLosJugadores = (from p in context.Player
+//                         where p.Status == true
+//                         select p).ToList();
+//Lambda expressions
+//var todosLosJugadores = context.Player.Where(p=>p.Status==true).ToList();
+
+//foreach (var item in todosLosJugadores)
+//{
+//    Console.WriteLine(item.FullName + " | " + item.Dorsal);
+//}
+
+var buscarJugador = (from p in context.Player
+                     where p.Dorsal == 30
+                     select p).FirstOrDefault();
+Console.WriteLine("El jugador encontrado es: " + buscarJugador.FullName);
+//Update player
+//buscarJugador.Dorsal = 30;
+//context.SaveChanges();
+
+//Delete player
+
+context.Player.Remove(buscarJugador);
+context.SaveChanges();
+
+
+
